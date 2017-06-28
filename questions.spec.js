@@ -60,7 +60,7 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toEqual('sna');
     });
 
-    xit('makes numbers negative', function() {
+    it('makes numbers negative', function() {
         var resultOne = makeNegative(5);
         var resultTwo = makeNegative(-5);
 

@@ -46,12 +46,11 @@ var allElementsExceptFirstThree = function(array) {
 
 var addElementToBeginning = function(array, element) {
   array.unshift(1);
-
-  return array
+    return array
 }
 
 var sortByLastLetter = function(array) {
-
+    return 'Write your method here';
 }
 
 var getFirstHalf = function(string) {
@@ -59,7 +58,7 @@ var getFirstHalf = function(string) {
 }
 
 var makeNegative = function(number) {
-    return 'Write your method here';
+    return -Math.abs(number)
 }
 
 var numberOfPalindromes = function(array) {
