@@ -70,11 +70,24 @@ var shortestWord = function(array) {
 }
 
 var longestWord = function(array) {
-    return 'Write your method here';
+  // var result ="";
+  // for (var i = 0; i < array.length; i++) {
+  //   if (array[i].length > result.length) {
+  //     result = array[i]
+  //   }
+  // }
+  // return result
+  function returnMax(previousMax,word){
+    return previousMax.length > word.length ? previousMax : word
+  }
+  return array.reduce(returnMax);
 }
 
 var sumNumbers = function(array) {
-    return 'Write your method here';
+  function sum(a,b){
+    return a+b;
+}
+return array.reduce(sum)
 }
 
 var repeatElements = function(array) {
@@ -94,7 +107,12 @@ var getElementsUntilGreaterThanFive = function(array) {
 }
 
 var convertArrayToObject = function(array) {
-    return 'Write your method here';
+    var newObject = {}
+    if (array.length % 2) throw "error";
+    for (var i = 0; i < array.length; i += 2) {
+      newObject[array[i]] = array[i+1];
+    }
+    return newObject;
 }
 
 var getAllLetters = function(array) {

@@ -27,7 +27,7 @@ describe('javascript-Recall', function() {
         expect(result).toEqual(['god', 'yeknom', 'tnahpele', 'kayak']);
     });
 
-    xit('makes every possible pairing of students', function() {
+    it('makes every possible pairing of students', function() {
         var result = everyPossiblePair(['Jon', 'Tyrion', 'Daenerys']);
         // sorted alphabetically
         expect(result).toEqual([
@@ -47,12 +47,12 @@ describe('javascript-Recall', function() {
         expect(result).toEqual([1, 2, 3, 4, 5]);
     });
 
-    xit('sorts an array by the last letter of each word', function() {
+    it('sorts an array by the last letter of each word', function() {
         var result = sortByLastLetter(['Lannister', 'Stark', 'Greyjoy', 'Targaryen']);
         expect(result).toEqual(['Stark', 'Targaryen', 'Lannister', 'Greyjoy']);
     });
 
-    xit('gets the first half of a string', function() {
+    it('gets the first half of a string', function() {
         var resultOne = getFirstHalf('dragon');
         var resultTwo = getFirstHalf('snake');
 
@@ -68,47 +68,47 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toEqual(-5);
     });
 
-    xit('counts elements in an array that are palindromes', function() {
+    it('counts elements in an array that are palindromes', function() {
         var result = numberOfPalindromes(['kayak', 'noon', 'khaleesi', 'hodor', 'racecar', 'abcbc', 'abcba']);
         expect(result).toEqual(4);
     });
 
-    xit('returns the shortest word in an array', function() {
+    it('returns the shortest word in an array', function() {
         var result = shortestWord(['winter', 'is', 'coming']);
         expect(result).toEqual('is');
     });
 
-    xit('returns the longest word in an array', function() {
+    it('returns the longest word in an array', function() {
         var result = longestWord(['A', 'Lannister', 'always', 'pays', 'his', 'debts'])
         expect(result).toEqual('Lannister');
     });
 
-    xit('sums up the numbers in an array', function() {
+    it('sums up the numbers in an array', function() {
         var result = sumNumbers([1, 3, 5, 6, 2, 8]);
         expect(result).toEqual(25);
     });
 
-    xit('repeats the elements of an array', function() {
+    it('repeats the elements of an array', function() {
         var result = repeatElements(['a', 'b', 'c']);
         expect(result).toEqual(['a', 'b', 'c', 'a', 'b', 'c']);
     });
 
-    xit('turns a number string into a number', function() {
+    it('turns a number string into a number', function() {
         var result = stringToNumber('3');
         expect(result).toEqual(3);
     });
 
-    xit('calculates the average of an array of numbers', function() {
+    it('calculates the average of an array of numbers', function() {
         var result = calculateAverage([10, 15, 25]);
         expect(result).toEqual((10 + 15 + 25) / 3);
     });
 
-    xit('gets elements until greater than five', function() {
+    it('gets elements until greater than five', function() {
         var result = getElementsUntilGreaterThanFive([1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]);
         expect(result).toEqual([1, 3, 5, 4, 1, 2]);
     });
 
-    xit('converts an array to an object', function() {
+    it('converts an array to an object', function() {
         var result = convertArrayToObject(['Jaime', 'Lannister', 'Robb', 'Stark', 'Joffrey', 'Baratheon']);
         expect(result).toEqual({
             'Jaime': 'Lannister',
@@ -117,7 +117,7 @@ describe('javascript-Recall', function() {
         });
     });
 
-    xit('gets all letters in an array of words', function() {
+    it('gets all letters in an array of words', function() {
         // returns sorted
         var result = getAllLetters(['cat', 'dog', 'fish']);
         expect(result).toEqual(['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']);
@@ -126,7 +126,7 @@ describe('javascript-Recall', function() {
         expect(result2).toEqual(['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']);
     });
 
-    xit('swaps keys and values in an object', function() {
+    it('swaps keys and values in an object', function() {
         var result = swapKeysAndValues({
             'Frodo': 'Baggins',
             'Samwise': 'Gamgee',
@@ -139,7 +139,7 @@ describe('javascript-Recall', function() {
         });
     });
 
-    xit('adds together keys and values', function() {
+    it('adds together keys and values', function() {
         var result = sumKeysAndValues({
             5: 3,
             1: 7
@@ -147,36 +147,36 @@ describe('javascript-Recall', function() {
         expect(result).toEqual(16);
     });
 
-    xit('removes capital letters from a string', function() {
+    it('removes capital letters from a string', function() {
         var result = removeCapitals('Hello Kitty');
         expect(result).toEqual('ello itty');
     });
 
-    xit('rounds up a number', function() {
+    it('rounds up a number', function() {
         var result = roundUp(4.3942);
         expect(result).toEqual(5);
     });
 
-    xit('formats a date nicely', function() {
+    it('formats a date nicely', function() {
         var result = formatDateNicely(new Date('2015-03-04'));
         expect(result).toEqual('04/03/2015');
     });
 
-    xit('gets the domain name from an email address', function() {
+    it('gets the domain name from an email address', function() {
         var result = getDomainName('spike@makersacademy.com');
         expect(result).toEqual('makersacademy');
         var result2 = getDomainName('spike@ssh.makersacademy.com');
         expect(result2).toEqual('ssh.makersacademy');
     });
 
-    xit('titleizes a string', function() {
+    it('titleizes a string', function() {
         var result = titleize('the lion the witch and the wardrobe');
         expect(result).toEqual('The Lion the Witch and the Wardrobe');
         var result2 = titleize('the lion the witch. and the wardrobe');
         expect(result2).toEqual('The Lion the Witch. And the Wardrobe');
     });
 
-    xit('checks a string for special characters', function() {
+    it('checks a string for special characters', function() {
         var resultOne = checkForSpecialCharacters('ABCdef123');
         var resultTwo = checkForSpecialCharacters('ABC@dsklfj!');
 
@@ -184,7 +184,7 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toBe(true);
     });
 
-    xit('finds the square root of a number', function() {
+    it('finds the square root of a number', function() {
         var resultOne = squareRoot(9);
         var resultTwo = squareRoot(3);
 
@@ -192,12 +192,12 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toEqual(1.7320508075688772);
     });
 
-    xit('finds the factorial of a number', function() {
+    it('finds the factorial of a number', function() {
         var result = factorial(5);
         expect(result).toEqual(120); // = 5 * 4 * 3 * 2 * 1
     });
 
-    xit('finds all possible anagrams of a word', function() {
+    it('finds all possible anagrams of a word', function() {
         var result = findAnagrams('mad');
         var expectedAnagrams = ["adm", "amd", "dam", "dma", "mad", "mda"];
         for (var anagram of expectedAnagrams) {
@@ -210,7 +210,7 @@ describe('javascript-Recall', function() {
         }
     });
 
-    xit('converts Fahrenheit to Celsius rounding to the nearest integer', function() {
+    it('converts Fahrenheit to Celsius rounding to the nearest integer', function() {
         var resultOne = convertToCelsius(32);
         var resultTwo = convertToCelsius(55);
 
@@ -218,7 +218,7 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toEqual(13);
     });
 
-    xit('changes each letter of an array into its position in the alphabet', function() {
+    it('changes each letter of an array into its position in the alphabet', function() {
         var result = letterPosition(['H', 'e', 'l', 'l', 'o', 'k', 'i', 't', 't', 'y']);
         expect(result).toEqual([8, 5, 12, 12, 15, 11, 9, 20, 20, 25]);
     });
