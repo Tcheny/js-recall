@@ -116,7 +116,11 @@ var convertArrayToObject = function(array) {
 }
 
 var getAllLetters = function(array) {
-    return 'Write your method here';
+    function addIfUnique(letters, newLetter){
+      if(letters.indexOf(newLetter) === -1) letters.push(newLetter)
+      return letters;
+    }
+    return array.join('').split('').sort().reduce(addIfUnique, []);
 }
 
 var swapKeysAndValues = function(object) {
@@ -128,7 +132,12 @@ var sumKeysAndValues = function(object) {
 }
 
 var removeCapitals = function(string) {
-    return 'Write your method here';
+    // function isNotCapital(character){
+    //   var charCode = character.charCodeAt(0);
+    //   return (charCode > 64 && charCode < 91) ? false : true;
+    // }
+    // return string.split('').filter(isNotCapital).join('')
+    return string.replace(/[A-Z]/g,'')
 }
 
 var roundUp = function(number) {
