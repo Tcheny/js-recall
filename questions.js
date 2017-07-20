@@ -153,11 +153,28 @@ var getDomainName = function(string) {
 }
 
 var titleize = function(string) {
-    return 'Write your method here';
+  var exceptions = ['the','and'];
+  function titleWord(word,exceptions) {
+    if (exceptions.indexOf(word) !== -1) return word ;
+    return word[0].toUpperCase() + word.slice(1).toLowerCase();
+  }
+  var titleizeArray = [];
+  var firstWordOfSentence = true;
+  for (var word of string.split(' ') ) {
+    if (firstWordOfSentence){
+      titleizeArray.push(titleWord(word,[]))
+      firstWordOfSentence = false;
+    }
+    else {
+      titleizeArray.push(titleWord(word, exceptions))
+    }
+    if (word.slice(-1) ===  ".") firstWordOfSentence = true;
+  }
+  return titleizeArray.join(' ');
 }
 
 var checkForSpecialCharacters = function(string) {
-    return 'Write your method here';
+  return string.match(/\W/g) ? true : false
 }
 
 var squareRoot = function(number) {
@@ -169,7 +186,23 @@ var factorial = function(number) {
 }
 
 var findAnagrams = function(string) {
-    return 'Write your method here';
+  function permute (array) {
+    if (array.length === 1) return [array];
+    var fullPermutation = [];
+    for (var i in array) {
+      var subset = array.slice(0);
+      subset.splice(i, 1);
+      for (var permutation of permute(subset)) {
+        permutation.unshift(array[i]);
+        fullPermutation.push(permutation);
+      }
+    }
+    return fullPermutation
+  }
+  function joinLetters (array) {
+    return array.join('');
+  }
+  return permute(string.split('')).map(joinLetters);
 }
 
 var convertToCelsius = function(number) {
