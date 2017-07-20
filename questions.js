@@ -178,11 +178,11 @@ var checkForSpecialCharacters = function(string) {
 }
 
 var squareRoot = function(number) {
-    return 'Write your method here';
+  return Math.sqrt(number)
 }
 
 var factorial = function(number) {
-    return 'Write your method here';
+  return (number != 1) ? number * factorial(number - 1) : 1;
 }
 
 var findAnagrams = function(string) {
