@@ -206,8 +206,7 @@ var findAnagrams = function(string) {
 }
 
 var convertToCelsius = function(number) {
-  var fahrenheit = (number - 32) * 5 / 9;
-  return Math.round(fahrenheit)
+  return Math.round((5/9) * (number-32));
 }
 
 var letterPosition = function(array) {
