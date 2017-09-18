@@ -71,7 +71,9 @@ var numberOfPalindromes = function(array) {
 }
 
 var shortestWord = function(array) {
-    return 'Write your method here';
+    return array.reduce(function (r, a) {
+        return r.length < a.length ? r : a;
+    });
 }
 
 var longestWord = function(array) {
@@ -96,11 +98,11 @@ return array.reduce(sum)
 }
 
 var repeatElements = function(array) {
-    return 'Write your method here';
+    return array.concat(array);
 }
 
 var stringToNumber = function(string) {
-    return 'Write your method here';
+    return parseInt(string);
 }
 
 var calculateAverage = function(array) {
